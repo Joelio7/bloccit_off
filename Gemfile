@@ -11,6 +11,11 @@ source 'https://rubygems.org'
 
  group :development do
   gem 'sqlite3'
+  gem 'pry-rails'
+ end
+
+ group :development, :test do
+   gem 'rspec-rails', '~> 3.0'
  end
 
  # Use SCSS for stylesheets
