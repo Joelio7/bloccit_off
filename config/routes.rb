@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-  get 'home/about'
+  root to: 'home#about'
 
   devise_for :users
-  resources :users, only: [:show]
 
-  root to: 'home#about'
+  resources :users, only: [:show] do
+    resources :items, only: [:create]
+  end
 end

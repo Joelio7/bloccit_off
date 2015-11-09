@@ -1,1 +1,2 @@
-<h1> My info </h1>
+<%= render partial: '/items/form', locals: {item: @new_item } %>
+<%= render  partial: '/items/item',  collection: @items %>
