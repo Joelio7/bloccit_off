@@ -1,2 +1,19 @@
-<%= render partial: '/items/form', locals: {item: @new_item } %>
-<%= render  partial: '/items/item',  collection: @items %>
+  <div>
+    <div class='new-item'>
+      <%= render partial: 'items/form', locals: {item: @new_item } %>
+   </div>
+   <div class="media">
+     <div class="media-body">
+         <table class="table table-striped">
+         <thead>
+           <tr>
+              <th>item</th>
+              <th>complete</th>
+            </tr>
+          </thead>
+         <tbody class="js-items">
+           <%= render @user.items %>
+         </tbody>
+       </div>
+     </div>
+   </div>

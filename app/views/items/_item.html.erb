@@ -1,19 +1,5 @@
-    <div class="media">
-      <div class="media-body">
-          <table class="table table-striped"
-          <thead>
-            <tr>
-               <th>item</th>
-               <th>completed</th>
-             </tr>
-           </thead>
-           <tbody>
-             <tr>
+            <tr id="item-<%= item.id %>">
               <td><%= item.name %></td>
-              <td>complete</td>
+              <td><%= link_to "", [item.user, item], method: :delete, remote: true, class: 'glyphicon glyphicon-ok' %></td>
+              <td>   <%= item.name %> created <%= time_ago_in_words(item.created_at) %> ago </td>
             </tr>
-
-        </h4>
-      </div>
-    </div>
-  </div>

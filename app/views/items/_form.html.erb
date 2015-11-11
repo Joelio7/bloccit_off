@@ -1,11 +1,9 @@
-<h1>item creation</h1>
+<h1>Item Creation</h1>
 <div class="col-md-8">
-  <%= form_for [@user, item] do |f| %>
+   <%= form_for [@user, item], remote: true do |f| %>
     <div class="form-group">
-      <%= f.label :name %>
-      <%= f.text_field :name, class: 'form-control', placeholder: "Create item" %>
+      <%= f.text_field :name, class: 'form-control', placeholder: "Create Item" %>
     </div>
     <%= f.submit "Save", class: 'btn btn-success' %>
-
     <% end %>
   </div>
